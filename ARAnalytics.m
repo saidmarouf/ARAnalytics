@@ -151,7 +151,7 @@ static BOOL _ARLogShouldPrintStdout = YES;
     }
     
     if (analyticsDictionary[ARIntercomAPIKey] && analyticsDictionary[ARIntercomAppIdentifier]) {
-        [self setupIntercomWithAppIdentifier:analyticsDictionary[ARIntercomAPIKey] andAPIKey:analyticsDictionary[ARIntercomAppIdentifier]];
+        [self setupIntercomWithAppIdentifier:analyticsDictionary[ARIntercomAppIdentifier] andAPIKey:analyticsDictionary[ARIntercomAPIKey]];
     }
 }
 
