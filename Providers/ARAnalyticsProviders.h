@@ -98,3 +98,7 @@
 #ifdef AR_ADJUST_EXISTS
 #import "AdjustProvider.h"
 #endif
+
+#ifdef AR_INTERCOM_EXISTS
+#import "IntercomProvider.h"
+#endif

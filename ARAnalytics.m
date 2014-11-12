@@ -149,6 +149,10 @@ static BOOL _ARLogShouldPrintStdout = YES;
     if (analyticsDictionary[ARAdjustAppTokenKey]) {
         [self setupAdjustWithAppToken:analyticsDictionary[ARAdjustAppTokenKey]];
     }
+    
+    if (analyticsDictionary[ARIntercomAPIKey] && analyticsDictionary[ARIntercomAppIdentifier]) {
+        [self setupIntercomWithAppIdentifier:analyticsDictionary[ARIntercomAPIKey] andAPIKey:analyticsDictionary[ARIntercomAppIdentifier]];
+    }
 }
 
 + (void)setupProvider:(ARAnalyticalProvider*)provider {
@@ -357,6 +361,13 @@ static BOOL _ARLogShouldPrintStdout = YES;
 + (void)setupAdjustWithAppToken:(NSString *)token {
 #ifdef AR_ADJUST_EXISTS
     AdjustProvider *provider = [[AdjustProvider alloc] initWithIdentifier:token];
+    [self setupProvider:provider];
+#endif
+}
+
++ (void)setupIntercomWithAppIdentifier:(NSString *)identifier andAPIKey:(NSString *)key {
+#ifdef AR_INTERCOM_EXISTS
+    IntercomProvider *provider = [[IntercomProvider alloc] initWithIdentifier:identifier andApiKey:key];
     [self setupProvider:provider];
 #endif
 }
@@ -574,4 +585,6 @@ const NSString *ARLibratoPrefix = @"ARLibratoPrefix";
 const NSString *ARSegmentioWriteKey = @"ARSegmentioWriteKey";
 const NSString *ARYandexMobileMetricaAPIKey = @"ARYandexMobileMetricaAPIKey";
 const NSString *ARAdjustAppTokenKey = @"ARAdjustAppTokenKey";
+const NSString *ARIntercomAppIdentifier = @"ARIntercomAppIdentifier";
+const NSString *ARIntercomAPIKey = @"ARIntercomAPIKey";
 

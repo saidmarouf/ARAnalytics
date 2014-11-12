@@ -42,6 +42,9 @@ PODS:
   - ARAnalytics/HockeyApp (2.9.0):
     - ARAnalytics/CoreIOS
     - HockeySDK
+  - ARAnalytics/Intercom (2.9.0):
+    - ARAnalytics/CoreIOS
+    - Intercom
   - ARAnalytics/KISSmetrics (2.9.0):
     - ARAnalytics/CoreIOS
     - KISSmetrics
@@ -68,6 +71,7 @@ PODS:
     - ARAnalytics/HeapAnalytics
     - ARAnalytics/Helpshift
     - ARAnalytics/HockeyApp
+    - ARAnalytics/Intercom
     - ARAnalytics/KISSmetrics
     - ARAnalytics/KISSmetricsOSX
     - ARAnalytics/Librato
@@ -116,9 +120,10 @@ PODS:
   - FMDB/standard (2.2):
     - FMDB/common
   - GoogleAnalytics-iOS-SDK (3.10)
-  - Heap (2.0.5)
+  - Heap (2.0.6)
   - Helpshift (4.9.1)
   - HockeySDK (3.5.4)
+  - Intercom (2.0.5)
   - KISSmetrics (1.2.0)
   - KSCrash/Recording (0.0.3)
   - KSCrash/Reporting/Filters/AppleFmt (0.0.3):
@@ -134,7 +139,7 @@ PODS:
     - Bolts (~> 1.1.3)
   - protobuf-c (0.15)
   - Specta (0.2.1)
-  - Tapstream (2.8.3)
+  - Tapstream (2.8.4)
   - TestFlightSDK (3.0.2)
   - TRVSDictionaryWithCaseInsensitivity (0.0.2)
   - UMengAnalytics (3.1.8)
@@ -159,8 +164,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Adjust: 4ebd3068d22a136d7bbd20925911f4bebcb9c9cd
   Amplitude-iOS: 12dac99b0d1820223ae6727ed0c17d332348c6ae
-  Analytics: a00897fe9ec057a1ff27be1193817211ca8eba4d
-  ARAnalytics: 75794914e4ec113150ffb011b4eec397e35d59f3
+  Analytics: c5fb93f5abfc95b507925746da4381fc73d5739c
+  ARAnalytics: e7d8f63bcb12183fb339b5a77878118e83da14c8
   Aspects: 7f1aea592d35c0c1af74ee2a5efa5c555b0ebfc9
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
   BPXLUUIDHandler: 12376ecdba7aa93b7fb3da32e9130e6593d7ef99
@@ -171,9 +176,10 @@ SPEC CHECKSUMS:
   FlurrySDK: bed9e5598353f867508d164795a451e3ada92cb6
   FMDB: f6f4511ad1e9ace38e9b6f4d83c2cddaabf98ea6
   GoogleAnalytics-iOS-SDK: e5872d2acc120613d954320e206c7e3bc8357d7c
-  Heap: 60faab4583c29bad5398e97dc430f9937d1c0ab9
+  Heap: eb41edac4a5462df480d38da4e1e85d4bacdb6e4
   Helpshift: a2cc5a7d4a56678decd1ab911eb710a927952eac
   HockeySDK: bf0e17f8d0c2b4778dff5ffd42248569a007ccbf
+  Intercom: aebc970ee38326a8a83b78dc9ba316fd1e337a8c
   KISSmetrics: 67213618a68b1e730d9dd50ef0b263f278cc43af
   KSCrash: c0a693b2d83ced5c15a40d4e916833c655475e6a
   Localytics-iOS-Client: 3553cabdfcd6255364ec9eb3ecfe9ec4f74d7be4
@@ -183,7 +189,7 @@ SPEC CHECKSUMS:
   Parse: 7de25b6f70f0b233e5d25835f62eabfa91e4f9d7
   protobuf-c: 0177b8dbc4afc4ec5d01e868b3e25a7400b98ca0
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
-  Tapstream: b2d949e963c393938697db68256ba70aadddb820
+  Tapstream: bd3b1e92f8e18ab69bb89b83dfa2c5283cd405b4
   TestFlightSDK: 0c24c533748d0d84bfe7a3cb6036fa79124d84ee
   TRVSDictionaryWithCaseInsensitivity: a61daa8469fa079e05b694f6aad5441785c837d1
   UMengAnalytics: c263b4e0f27e91551b7e79eacdf812f1bae0e256

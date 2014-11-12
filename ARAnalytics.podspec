@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     =  'https://github.com/orta/ARAnalytics'
   s.authors      =  { 'orta' => 'orta.therox@gmail.com', 'Daniel Haight' => "confidence.designed@gmail.com" }
   s.source       =  { :git => 'https://github.com/orta/ARAnalytics.git', :tag => s.version.to_s }
-  s.ios.deployment_target = "6.0"
+  s.ios.deployment_target = "7.0"
   s.osx.deployment_target = "10.7"
   s.social_media_url = "https://twitter.com/orta"
   s.requires_arc =  true
@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   segmentio      = { :spec_name => "Segmentio",        :dependency => "Analytics/Segmentio" }
   yandex         = { :spec_name => "YandexMobileMetrica", :dependency => "YandexMobileMetrica" }
   adjust         = { :spec_name => "Adjust",           :dependency => "Adjust" }
+  intercom       = { :spec_name => "Intercom",         :dependency => "Intercom" }
   librato        = { :spec_name => "Librato" }
   crashlytics    = { :spec_name => "Crashlytics" }
 
@@ -41,7 +42,7 @@ Pod::Spec.new do |s|
 #  countly_mac     = { :spec_name => "CountlyOSX",      :dependency => "Countly",                :osx => true,  :provider => "Countly" }
   mixpanel_mac    = { :spec_name => "MixpanelOSX",     :dependency => "Mixpanel-OSX-Community", :osx => true,  :provider => "Mixpanel"}
 
-  $all_analytics = [testflight_sdk, mixpanel, localytics, flurry, google, kissmetrics, crittercism, crashlytics, bugsnag, countly, helpshift,kissmetrics_mac, mixpanel_mac, tapstream, newRelic, amplitude, hockeyApp, parseAnalytics, heap, chartbeat, umeng, librato, segmentio, yandex, adjust]
+  $all_analytics = [testflight_sdk, mixpanel, localytics, flurry, google, kissmetrics, crittercism, crashlytics, bugsnag, countly, helpshift,kissmetrics_mac, mixpanel_mac, tapstream, newRelic, amplitude, hockeyApp, parseAnalytics, heap, chartbeat, umeng, librato, segmentio, yandex, adjust, intercom]
 
   # To make the pod spec API cleaner, subspecs are "iOS/KISSmetrics"
 
@@ -113,7 +114,7 @@ Pod::Spec.new do |s|
 
   # create an array of clashing subspecs.
   clashing_subspecs = [hockeyApp, crittercism]
-
+  
   # cycle through clashing subspecs, removing all but the the one we want to form non_clashing array
   clashing_subspecs.each do |keep_subspec|
     non_clash = $all_analytics

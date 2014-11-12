@@ -102,6 +102,7 @@
 + (void)setupSegmentioWithWriteKey:(NSString*)key;
 + (void)setupYandexMobileMetricaWithAPIKey:(NSString*)key;
 + (void)setupAdjustWithAppToken:(NSString *)token;
++ (void)setupIntercomWithAppIdentifier:(NSString *)identifier andAPIKey:(NSString *)key;
 
 /// Add a provider manually
 + (void)setupProvider:(ARAnalyticalProvider *)provider;
@@ -205,4 +206,5 @@ extern const NSString *ARLibratoPrefix;
 extern const NSString *ARSegmentioWriteKey;
 extern const NSString *ARYandexMobileMetricaAPIKey;
 extern const NSString *ARAdjustAppTokenKey;
-
+extern const NSString *ARIntercomAppIdentifier;
+extern const NSString *ARIntercomAPIKey;
