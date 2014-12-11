@@ -25,10 +25,14 @@
 }
 
 - (void)event:(NSString *)event withProperties:(NSDictionary *)properties {
-    [Adjust trackEvent:event withParameters:properties];
+    if(_eventTokenMap && [_eventTokenMap containsKey:event])
+        [Adjust trackEvent:_eventTokenMap[event] withParameters:properties];
 }
 
-
+- (void) setEventTokenMap:(NSDictionary *)eventTokenMap {
+    if(_eventTokenMap != eventTokenMap)
+        _eventTokenMap = eventTokenMap;
+}
 
 
 
