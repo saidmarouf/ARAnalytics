@@ -8,5 +8,5 @@
 #import "ARAnalyticalProvider.h"
 
 @interface AdjustProvider : ARAnalyticalProvider
-@property (nonatomic, strong) NSDictionary *eventTokenMap;
+- (id)initWithIdentifier:(NSString *)identifier eventTokenMap:(NSDictionary *)eventTokenMap;
 @end
