@@ -147,7 +147,7 @@ static BOOL _ARLogShouldPrintStdout = YES;
     }
     
     if (analyticsDictionary[ARAdjustAppTokenKey]) {
-        [self setupAdjustWithAppToken:analyticsDictionary[ARAdjustAppTokenKey]];
+        [self setupAdjustWithAppToken:analyticsDictionary[ARAdjustAppTokenKey] eventTokenMap:analyticsDictionary[ARAdjustEventTokenMap]];
     }
     
     if (analyticsDictionary[ARIntercomAPIKey] && analyticsDictionary[ARIntercomAppIdentifier]) {
@@ -358,9 +358,9 @@ static BOOL _ARLogShouldPrintStdout = YES;
 #endif
 }
 
-+ (void)setupAdjustWithAppToken:(NSString *)token {
++ (void)setupAdjustWithAppToken:(NSString *)token eventTokenMap:(NSDictionary *)eventTokenMap {
 #ifdef AR_ADJUST_EXISTS
-    AdjustProvider *provider = [[AdjustProvider alloc] initWithIdentifier:token];
+    AdjustProvider *provider = [[AdjustProvider alloc] initWithIdentifier:token eventTokenMap:eventTokenMap];
     [self setupProvider:provider];
 #endif
 }
@@ -585,6 +585,7 @@ const NSString *ARLibratoPrefix = @"ARLibratoPrefix";
 const NSString *ARSegmentioWriteKey = @"ARSegmentioWriteKey";
 const NSString *ARYandexMobileMetricaAPIKey = @"ARYandexMobileMetricaAPIKey";
 const NSString *ARAdjustAppTokenKey = @"ARAdjustAppTokenKey";
+const NSString *ARAdjustEventTokenMap = @"ARAdjustEventTokenMap";
 const NSString *ARIntercomAppIdentifier = @"ARIntercomAppIdentifier";
 const NSString *ARIntercomAPIKey = @"ARIntercomAPIKey";
 

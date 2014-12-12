@@ -101,7 +101,7 @@
 + (void)setupLibratoWithEmail:(NSString *)email token:(NSString *)token prefix:(NSString *)prefix;
 + (void)setupSegmentioWithWriteKey:(NSString*)key;
 + (void)setupYandexMobileMetricaWithAPIKey:(NSString*)key;
-+ (void)setupAdjustWithAppToken:(NSString *)token;
++ (void)setupAdjustWithAppToken:(NSString *)token eventTokenMap:(NSDictionary *)eventTokenMap;
 + (void)setupIntercomWithAppIdentifier:(NSString *)identifier andAPIKey:(NSString *)key;
 
 /// Add a provider manually
@@ -206,5 +206,6 @@ extern const NSString *ARLibratoPrefix;
 extern const NSString *ARSegmentioWriteKey;
 extern const NSString *ARYandexMobileMetricaAPIKey;
 extern const NSString *ARAdjustAppTokenKey;
+extern const NSString *ARAdjustEventTokenMap;
 extern const NSString *ARIntercomAppIdentifier;
 extern const NSString *ARIntercomAPIKey;
