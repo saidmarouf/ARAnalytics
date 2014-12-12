@@ -26,9 +26,11 @@
     [Adjust setEnvironment:AIEnvironmentProduction];
 #endif
     
-    _eventTokenMap = eventTokenMap;
+    if(self = [super init]) {
+        _eventTokenMap = eventTokenMap;
+    }
     
-    return [super init];
+    return self;
 }
 
 - (void)event:(NSString *)event withProperties:(NSDictionary *)properties {
