@@ -40,7 +40,8 @@ static ADJConfig *sharedAdjustConfigurator = nil;
         ADJEvent *e = [ADJEvent eventWithEventToken:_eventTokenMap[event]];
         if(properties) {
             for (NSString *pKey in properties) {
-                [e addCallbackParameter:pKey value:properties[pKey]];
+                if(properties[pKey] && properties[pKey] != [NSNull null])
+                    [e addCallbackParameter:pKey value:properties[pKey]];
             }
         }
         [Adjust trackEvent:e];
