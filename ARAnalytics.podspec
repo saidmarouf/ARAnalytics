@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   librato        = { :spec_name => "Librato" }
   testflight_sdk = { :spec_name => "TestFlight",          :dependency => ["TestFlightSDK", "BPXLUUIDHandler"] }
   crashlytics    = { :spec_name => "Crashlytics" }
-  fbevents       = { :spec_name => "FBEvents",            :dependency => "Facebook-iOS-SDK" }
+  fbevents       = { :spec_name => "FBEvents" }
   
   kissmetrics_mac = { :spec_name => "KISSmetricsOSX",  :dependency => "KISSmetrics",            :osx => true,  :provider => "KISSmetrics" }
 #  countly_mac     = { :spec_name => "CountlyOSX",      :dependency => "Countly",                :osx => true,  :provider => "Countly" }
