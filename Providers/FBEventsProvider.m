@@ -6,7 +6,7 @@
 //
 
 #import "FBEventsProvider.h"
-#import "ARAnalyticsProviders.h"
+#import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
 
 @interface FBEventsProvider ()
 @end
