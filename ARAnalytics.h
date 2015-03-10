@@ -209,3 +209,4 @@ extern const NSString *ARAdjustAppTokenKey;
 extern const NSString *ARAdjustEventTokenMap;
 extern const NSString *ARIntercomAppIdentifier;
 extern const NSString *ARIntercomAPIKey;
+extern const NSString *ARFBEventsAppID;

@@ -104,5 +104,5 @@
 #endif
 
 #ifdef AR_FBEVENTS_EXISTS
-#import "FBEventProvider.h"
+#import "FBEventsProvider.h"
 #endif

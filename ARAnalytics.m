@@ -153,6 +153,10 @@ static BOOL _ARLogShouldPrintStdout = YES;
     if (analyticsDictionary[ARIntercomAPIKey] && analyticsDictionary[ARIntercomAppIdentifier]) {
         [self setupIntercomWithAppIdentifier:analyticsDictionary[ARIntercomAppIdentifier] andAPIKey:analyticsDictionary[ARIntercomAPIKey]];
     }
+    
+    if(analyticsDictionary[ARFBEventsAppID]) {
+        [self setupFBEvents];
+    }
 }
 
 + (void)setupProvider:(ARAnalyticalProvider*)provider {
@@ -374,7 +378,7 @@ static BOOL _ARLogShouldPrintStdout = YES;
 
 + (void)setupFBEvents {
 #ifdef AR_FBEVENTS_EXISTS
-    FBEventProvider *provider = [[FBEventProvider alloc] init];
+    FBEventsProvider *provider = [[FBEventsProvider alloc] init];
     [self setupProvider:provider];
 #endif
 }
@@ -596,4 +600,4 @@ const NSString *ARAdjustAppTokenKey = @"ARAdjustAppTokenKey";
 const NSString *ARAdjustEventTokenMap = @"ARAdjustEventTokenMap";
 const NSString *ARIntercomAppIdentifier = @"ARIntercomAppIdentifier";
 const NSString *ARIntercomAPIKey = @"ARIntercomAPIKey";
-
+const NSString *ARFBEventsAppID = @"ARFBEventsAppID";
