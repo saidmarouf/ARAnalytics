@@ -372,6 +372,14 @@ static BOOL _ARLogShouldPrintStdout = YES;
 #endif
 }
 
++ (void)setupFBEvents {
+#ifdef AR_FBEVENTS_EXISTS
+    FBEventProvider *provider = [[FBEventProvider alloc] init];
+    [self setupProvider:provider];
+#endif
+}
+
+
 #pragma mark -
 #pragma mark User Setup
 

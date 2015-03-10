@@ -102,3 +102,7 @@
 #ifdef AR_INTERCOM_EXISTS
 #import "IntercomProvider.h"
 #endif
+
+#ifdef AR_FBEVENTS_EXISTS
+#import "FBEventProvider.h"
+#endif
