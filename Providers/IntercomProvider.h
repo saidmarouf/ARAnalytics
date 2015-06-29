@@ -12,7 +12,7 @@
 
 - (instancetype)initWithIdentifier:(NSString *)identifier andApiKey:(NSString *)key;
 - (instancetype)initWithIdentifier:(NSString *)identifier andApiKey:(NSString *)key securityOptions:(NSDictionary *)options;
-- (void)identifyUserWithID:(NSString *)userID andEmailAddress:(NSString *)email completion:(void(^)(NSError *error))completion;
+- (void)identifyUserWithID:(NSString *)userID andEmailAddress:(NSString *)email;
 - (void)event:(NSString *)event withProperties:(NSDictionary *)properties completion:(void(^)(NSError *error))completion;
 
 @end

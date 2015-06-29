@@ -15,7 +15,16 @@
 @implementation FBEventsProvider
 
 - (void)event:(NSString *)event withProperties:(NSDictionary *)properties {
-    [FBAppEvents logEvent:event parameters:properties];
+    if(event && event.length > 0) {
+        
+        NSMutableCharacterSet *fbEventsAllowedCharacters = [NSMutableCharacterSet characterSetWithCharactersInString:@"_- "];
+        [fbEventsAllowedCharacters formUnionWithCharacterSet:[NSCharacterSet alphanumericCharacterSet]];
+        NSCharacterSet *unwantedSet = [fbEventsAllowedCharacters invertedSet];
+
+        event = [[event componentsSeparatedByCharactersInSet:unwantedSet] componentsJoinedByString:@""];
+        
+        [FBAppEvents logEvent:event parameters:properties];
+    }
 }
 
 @end

@@ -33,19 +33,15 @@
 }
 
 - (void)identifyUserWithID:(NSString *)userID andEmailAddress:(NSString *)email {
-    [self identifyUserWithID:userID andEmailAddress:email completion:nil];
-}
-
-- (void)identifyUserWithID:(NSString *)userID andEmailAddress:(NSString *)email completion:(void (^)(NSError *))completion {
     
     if (userID) {
-        [Intercom beginSessionForUserWithUserId:userID completion:completion];
+        [Intercom registerUserWithUserId:userID];
     }
     else if (email) {
-        [Intercom beginSessionForUserWithEmail:email completion:completion];
+        [Intercom registerUserWithEmail:email];
     }
     else {
-        [Intercom beginSessionForAnonymousUserWithCompletion:completion];
+        [Intercom registerUnidentifiedUser];
     }
 }
 
