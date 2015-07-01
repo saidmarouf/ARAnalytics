@@ -6,7 +6,7 @@
 //
 
 #import "FBEventsProvider.h"
-#import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface FBEventsProvider ()
 @end
@@ -23,7 +23,7 @@
 
         event = [[event componentsSeparatedByCharactersInSet:unwantedSet] componentsJoinedByString:@""];
         
-        [FBAppEvents logEvent:event parameters:properties];
+        [FBSDKAppEvents logEvent:event parameters:properties];
     }
 }
 
